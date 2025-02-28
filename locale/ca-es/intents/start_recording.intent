@@ -3,7 +3,7 @@
 (comença|inicia) l'operació (de gravació|d'enregistrament) d'àudio anomenada {name}
 (enregistra|grava) un àudio ara amb (el|es|) nom {name}
 (inicia|comença) (la gravació|l'enregistrament) d'àudio com a {name}
-(inicia|comença) (la gravació|sa gravació|l'enregistrament|s'enregistrament) d'àudio, (si us plau|sisplau), (amb nom|anomena) {name}
+(inicia|comença) (la gravació|sa gravació|l'enregistrament|s'enregistrament) d'àudio (si us plau|sisplau) (amb nom|anomena) {name}
 (inicia|comença) a (gravar|enregistrar) (àudio|so) (ara|)
 activa (la gravació|sa gravació|l'enregistrament|s'enregistrament) d'àudio (amb nom|de nom|anomenada|anomenat) {name}
 activa la gravació d'àudio
@@ -15,7 +15,7 @@ activa l'enregistrament d'àudio com a {name}
 comença (la gravació|l'enregistrament) (d'àudio|de so) (ara|) amb el nom de {name} (ara|)
 comença a (enregistrar|gravar) (com a|amb nom|amb el nom|amb es nom) {name}
 comença a (enregistrar|gravar) (si us plau|sisplau|per favor)
-comença a (enregistrar|gravar), (si us plau|sisplau|per favor), (amb nom|amb el nom|amb es nom) {name}
+comença a (enregistrar|gravar) (si us plau|sisplau|per favor) (amb nom|amb el nom|amb es nom) {name}
 comença a (gravar|enregistrar)
 comença a (gravar|enregistrar) (l'|s'|)àudio (sisplau|si us plau)
 comença a (gravar|enregistrar) amb nom {name}

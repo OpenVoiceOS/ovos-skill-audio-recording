@@ -51,8 +51,8 @@ Mit der Aufnahme fortfahren
 Aufnahme fortsetzen
 Nehme eine neue Audiodatei mit dem Namen {name} auf
 Nehme jetzt Audio mit dem Namen {name} auf
-Richte eine neue Aufnahme mit dem Namen {name} ein.
-Starte  eine neue Audioaufnahme mit dem Namen {name}
+Richte eine neue Aufnahme mit dem Namen {name} ein
+Starte eine neue Audioaufnahme mit dem Namen {name}
 Starte bitte die Audioaufnahme
 Starte bitte die Audioaufnahme mit dem Namen {name}
 Starte den Audioaufnahmevorgang
@@ -64,7 +64,7 @@ Starte eine Aufnahme
 Starte eine neue Audioaufnahme mit dem Namen {name}
 Starte jetzt die Audioaufnahme als {name}
 Starte jetzt die Audioaufnahme mit dem Namen {name}
-beginne Audioaufnahme  {name}
+beginne Audioaufnahme {name}
 beginne Aufzeichnung {name}
 eine neue Audioaufnahme starten
 eine neue Audiodatei aufnehmen
