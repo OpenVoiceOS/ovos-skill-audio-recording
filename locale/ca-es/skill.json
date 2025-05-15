@@ -1,0 +1,9 @@
+{
+  "examples": [
+    "comença l'enregistrament",
+    "enregistrament nou amb nom {name}",
+    "comença un enregistrament amb nom {name}",
+    "comença un nou enregistrament d'àudio anomenat {name}",
+    "inicia l'enregistrament"
+  ]
+}

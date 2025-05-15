@@ -1,0 +1,123 @@
+(comença|inicia) l'operació (de gravació|d'enregistrament) (d'àudio|de so)
+(comença|inicia) l'operació (de gravació|d'enregistrament) (de so|d'àudio) com a {name}
+(comença|inicia) l'operació (de gravació|d'enregistrament) d'àudio anomenada {name}
+(enregistra|grava) un àudio ara amb (el|es|) nom {name}
+(inicia|comença) (la gravació|l'enregistrament) d'àudio com a {name}
+(inicia|comença) (la gravació|sa gravació|l'enregistrament|s'enregistrament) d'àudio, (si us plau|sisplau), (amb nom|anomena) {name}
+(inicia|comença) a (gravar|enregistrar) (àudio|so) (ara|)
+activa (la gravació|sa gravació|l'enregistrament|s'enregistrament) d'àudio (amb nom|de nom|anomenada|anomenat) {name}
+activa la gravació d'àudio
+activa l'enregistrament d'àudio
+activa la gravació d'àudio amb el títol {name}
+activa l'enregistrament d'àudio amb el títol {name}
+activa la gravació d'àudio com a {name}
+activa l'enregistrament d'àudio com a {name}
+comença (la gravació|l'enregistrament) (d'àudio|de so) (ara|) amb el nom de {name} (ara|)
+comença a (enregistrar|gravar) (com a|amb nom|amb el nom|amb es nom) {name}
+comença a (enregistrar|gravar) (si us plau|sisplau|per favor)
+comença a (enregistrar|gravar), (si us plau|sisplau|per favor), (amb nom|amb el nom|amb es nom) {name}
+comença a (gravar|enregistrar)
+comença a (gravar|enregistrar) (l'|s'|)àudio (sisplau|si us plau)
+comença a (gravar|enregistrar) amb nom {name}
+comença a (gravar|enregistrar) ara amb (el|es|) nom {name}
+comença a (gravar|enregistrar) immediatament com a {name}
+comença a (gravar|enregistrar) àudio com a {name} ara
+comença a gravar
+comença a enregistrar
+comença a gravar amb el nom {name}
+comença a enregistrar amb el nom {name}
+comença a gravar ara
+comença a enregistrar ara
+comença a gravar ara com a {name}
+comença a enregistrar ara com a {name}
+comença a gravar immediatament
+comença a gravar ara
+comença a gravar ara mateix
+comença a enregistrar immediatament
+comença a enregistrar ara
+comença a enregistrar ara mateix
+comença a gravar {name}
+comença a enregitrar {name}
+comença l'enregistrament d'àudio amb nom {name}
+comença l'enregistrament d'àudio {name}
+comença la captura d'àudio
+comença la gravació d'àudio
+comença l'enregistrament d'àudio
+comença la captura d'àudio (amb nom|anomenada) {name}
+comença la captura d'àudio com a {name}
+comença la captura d'àudio titulada {name}
+comença la gravació
+comença l'enregistrament
+comença la gravació d'àudio
+comença l'enregistrament d'àudio
+comença a gravar àudio
+comença a enregistrar àudio
+comença la gravació d'àudio amb el nom {name}
+comença l'enregistrament d'àudio amb el nom {name}
+comença la gravació d'àudio titulada {name}
+comença l'enregistrament d'àudio titulada {name}
+comença la sessió de gravació
+comença la sessió d'enregistrament
+comença la sessió de gravació anomenada {name}
+comença la sessió d'enregistrament anomenada {name}
+configura (una gravació nova|un enregistrament nou) (amb nom|anomenada|anomenat) {name}
+continua amb la gravació
+continua amb l'enregistrament
+enregistra un fitxer d'àudio nou amb nom {name}
+enregistra un àudio amb nom {name}
+estableix un enregistrament anomenat {name}
+grava un nou fitxer d'àudio
+grava un fitxer d'àudio nou
+grava un àudio nou
+enregistra un nou fitxer d'àudio
+enregistra un fitxer d'àudio nou
+enregistra un àudio nou
+grava un àudio
+enregistra un àudio
+grava un àudio ara
+grava àudio ara
+enregistra un àudio ara
+enregistra àudio ara
+grava un àudio com a {name}
+enregistra un àudio com a {name}
+inicia (una gravació|un enregistrament)
+inicia (una gravació|un enregistrament) (anomenada|anomenat) {name}
+inicia (una gravació|un enregistrament) (d'àudio|de so)
+inicia (una gravació|un enregistrament) (de nom|amb nom|anomenada|anomenat) {name}
+inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat) {nom}
+inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat|amb nom|de nom) {name}
+inicia (una nova gravació|un enregistrament) (amb el|de) títol {name}
+inicia (una nova gravació|un nou enregistrament) d'àudio (amb nom|anomenada|anomenat) {name}
+inicia l'enregistrament anomenat {name}
+inicia l'enregistrament d'àudio {name}
+inicia l'enregistrament de nom {name}
+inicia l'enregistrament {name}
+inicia l'operació d'enregistrament d'àudio anomenada {name}
+inicia la gravació
+inicia l'enregistrament
+inicia un enregistrament d'àudio amb nom {name}
+inicia un enregistrament d'àudio anomenat {name}
+inicia una gravació d'àudio
+inicia la gravació d'àudio
+inicia un enregistrament d'àudio
+inicia l'enregistrament d'àudio
+inicia una gravació nova anomenada {name}
+inicia una gravació nova anomenada {name}
+inicia un enregistrament nou anomenat {name}
+inicia una nova gravació
+inicia una gravació nova
+inicia un nou enregistrament
+inicia un enregistrament nou
+inicia una nova gravació d'àudio
+inicialitza l'enregistrament
+inicialitza la gravació
+inicialitza l'enregistrament titulat {name}
+inicialitza la gravació titulada {name}
+nova gravació
+gravació nova
+enregistrament nou
+nou enregistrament
+nova gravació anomenada {name}
+gravació nova anomenada {name}
+nou enregistrament anomenat {name}
+enregistrament nou anomenat {name}
