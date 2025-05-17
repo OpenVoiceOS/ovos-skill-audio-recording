@@ -3,7 +3,7 @@ import os
 from setuptools import setup
 from os import walk, path
 
-URL = "https://github.com/OpenVoiceOS/skill-ovos-audio-recording"
+URL = "https://github.com/OpenVoiceOS/ovos-skill-audio-recording"
 SKILL_CLAZZ = "AudioRecordingSkill"  # needs to match __init__.py class name
 PYPI_NAME = "ovos-skill-audio-recording"  # pip install PYPI_NAME
 
