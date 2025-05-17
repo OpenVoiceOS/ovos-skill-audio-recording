@@ -84,7 +84,7 @@ inicia (una gravació|un enregistrament)
 inicia (una gravació|un enregistrament) (anomenada|anomenat) {name}
 inicia (una gravació|un enregistrament) (d'àudio|de so)
 inicia (una gravació|un enregistrament) (de nom|amb nom|anomenada|anomenat) {name}
-inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat) {nom}
+inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat) {name}
 inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat|amb nom|de nom) {name}
 inicia (una nova gravació|un enregistrament) (amb el|de) títol {name}
 inicia (una nova gravació|un nou enregistrament) d'àudio (amb nom|anomenada|anomenat) {name}

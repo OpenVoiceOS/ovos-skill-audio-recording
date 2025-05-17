@@ -6,7 +6,7 @@ Record audio to file, requires [ovos-dinkum-listener](https://github.com/OpenVoi
 
 continuously record audio to file and disables wake words/STT while active, made for [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener)
 
-A similar skill that saves text transcriptions instead of recording audio is [OpenVoiceOS/skill-ovos-dictation](https://github.com/OpenVoiceOS/skill-ovos-dictation)
+A similar skill that saves text transcriptions instead of recording audio is [OpenVoiceOS/ovos-skill-dictation](https://github.com/OpenVoiceOS/ovos-skill-dictation)
 
 in order to avoid users accidentally locking themselves in recording mode a special kind of wake word called a *stop hotword* can be configured, these special hotwords are only used during recording mode and will restore the listener to default state if detected. By default no *stop hotword* is pre-configured
 

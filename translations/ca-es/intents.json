@@ -57,7 +57,7 @@
     "inicia (una gravació|un enregistrament) (anomenada|anomenat) {name}",
     "inicia (una gravació|un enregistrament) (d'àudio|de so)",
     "inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat|amb nom|de nom) {name}",
-    "inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat) {nom}",
+    "inicia (una gravació|un enregistrament) d'àudio (anomenada|anomenat) {name}",
     "(inicia|comença) a (gravar|enregistrar) (àudio|so) (ara|)",
     "comença a (gravar|enregistrar) àudio com a {name} ara",
     "comença (la gravació|l'enregistrament) (d'àudio|de so) (ara|) amb el nom de {name} (ara|)",
