@@ -62,8 +62,8 @@ class AudioRecordingSkill(OVOSSkill):
 
     def stop_session(self, session: Session) -> bool:
         if session.session_id in self.recording_sessions and \
-                self.recording_sessions[session.session_id]["dictating"]:
-            self.recording_sessions[session.session_id]["dictating"] = False
+                self.recording_sessions[session.session_id]["recording"]:
+            self.recording_sessions[session.session_id]["recording"] = False
             message = dig_for_message()
             self.bus.emit(message.forward("recognizer_loop:record_stop"))
             return True
