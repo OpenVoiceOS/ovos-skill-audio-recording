@@ -1,12 +1,16 @@
 # Changelog
 
-## [0.2.6a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.6a1) (2025-05-17)
+## [0.2.7a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.7a1) (2025-06-07)
 
-[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.5...0.2.6a1)
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/V0.2.6...0.2.7a1)
 
 **Merged pull requests:**
 
-- fix: standardize urls / skill-id / pypi-name [\#26](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/26) ([JarbasAl](https://github.com/JarbasAl))
+- fix:session support [\#28](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/28) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.2.6](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/V0.2.6) (2025-05-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.6...V0.2.6)
 
 
 
