@@ -1,6 +1,7 @@
 from datetime import timedelta
 
-from ovos_bus_client.message import Message
+from ovos_bus_client.session import SessionManager, Session
+from ovos_bus_client.message import Message, dig_for_message
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_utils.time import now_local
@@ -10,7 +11,7 @@ from ovos_workshop.skills import OVOSSkill
 
 class AudioRecordingSkill(OVOSSkill):
     def initialize(self):
-        self.recording = False
+        self.recording_sessions = {}
         self.add_event("recognizer_loop:record_stop", self.handle_recording_stop)
 
     @classproperty
@@ -34,35 +35,44 @@ class AudioRecordingSkill(OVOSSkill):
     @intent_handler("start_recording.intent")
     def handle_start_recording(self, message):
         recording_name = message.data.get("name", str(now_local()))
-        self.recording = True
+        sess = SessionManager.get(message)
+        self.recording_sessions[sess.session_id] = dict(
+            file_name=recording_name,
+            recording=True
+        )
+
         self.bus.emit(message.forward("recognizer_loop:state.set",
                                       {"state": "recording",
                                        "recording_name": recording_name}))
 
         def maybe_stop(message):
-            if self.recording:
+            sess = SessionManager.get(message)
+            if self.recording_sessions.get(sess.session_id, {}).get("recording"):
                 self.bus.emit(message.forward("recognizer_loop:record_stop"))
-                self.recording = False
+                self.recording_sessions[sess.session_id]["recording"] = False
 
         # force a way out of recording mode after timeout
         self.schedule_event(maybe_stop, now_local() + timedelta(seconds=self.max_recording_time))
 
-    @intent_handler("start_recording.intent")
-    def handle_captains_log(self, message):
-        message.data["name"] = message.data.get("name", "captains_log_" + str(now_local()))
-        self.handle_start_recording(message)
-
     def handle_recording_stop(self, message):
-        self.recording = False
+        # keep track of any external (non skill initiated) stops
+        sess_id = SessionManager.get(message).session_id
+        if self.recording_sessions.get(sess_id, {}).get("recording"):
+            self.recording_sessions[sess_id]["recording"] = False
 
-    def stop(self):
-        """Optional action to take when "stop" is requested by the user.
-        This method should return True if it stopped something or
-        False (or None) otherwise.
-        If not relevant to your skill, feel free to remove.
-        """
-        if self.recording:
-            self.recording = False
-            self.bus.emit(Message("recognizer_loop:record_stop"))
+    def stop_session(self, session: Session) -> bool:
+        if session.session_id in self.recording_sessions and \
+                self.recording_sessions[session.session_id]["dictating"]:
+            self.recording_sessions[session.session_id]["dictating"] = False
+            message = dig_for_message()
+            self.bus.emit(message.forward("recognizer_loop:record_stop"))
             return True
         return False
+
+    def can_stop(self, message: Message) -> bool:
+        sess_id = SessionManager.get(message).session_id
+        return self.recording_sessions.get(sess_id, {}).get("recording")
+
+    def stop(self):
+        """global stop called"""
+        self.bus.emit(Message("recognizer_loop:record_stop"))
