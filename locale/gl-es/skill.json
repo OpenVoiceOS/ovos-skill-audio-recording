@@ -1,0 +1,9 @@
+{
+  "examples": [
+    "comezar a gravar",
+    "nova gravación co nome {name}",
+    "comezar unha gravación chamada {name}",
+    "comezar unha nova gravación de audio chamada {name}",
+    "comezar a gravar"
+  ]
+}
