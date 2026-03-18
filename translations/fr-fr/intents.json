@@ -16,6 +16,7 @@
     "démarre un enregistrement nommé {name}",
     "démarre un enregistrement appelé {name}",
     "démarre un enregistrement audio nommé {name}",
+    "démarre un nouvel enregistrement audio nommé {name}",
     "démarre un nouvel enregistrement nommé {name}",
     "lance un enregistrement nommé {name}",
     "lance un enregistrement appelé {name}",
