@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.9a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.9a1) (2026-03-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.8a4...0.2.9a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#37](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/37) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- Refine French recording intents [\#36](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/36) ([goldyfruit](https://github.com/goldyfruit))
+
 ## [0.2.8a4](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.8a4) (2026-02-27)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.8a3...0.2.8a4)
