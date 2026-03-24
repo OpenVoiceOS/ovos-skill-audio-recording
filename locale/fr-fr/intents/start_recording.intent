@@ -1,24 +1,24 @@
-démarre l'enregistrement
-démarre un enregistrement
-démarre un enregistrement audio
-démarre un nouvel enregistrement
-lance l'enregistrement
-lance un enregistrement audio
 commence l'enregistrement
+commence l'enregistrement {name}
 commence un enregistrement audio
+commence un enregistrement nommé {name}
 commence à enregistrer
-enregistre maintenant
-enregistre un fichier audio
+crée un enregistrement nommé {name}
 crée un nouvel enregistrement
+démarre l'enregistrement
 démarre l'enregistrement {name}
-démarre un enregistrement nommé {name}
+démarre un enregistrement
 démarre un enregistrement appelé {name}
+démarre un enregistrement audio
 démarre un enregistrement audio nommé {name}
+démarre un enregistrement nommé {name}
+démarre un nouvel enregistrement
 démarre un nouvel enregistrement audio nommé {name}
 démarre un nouvel enregistrement nommé {name}
-lance un enregistrement nommé {name}
-lance un enregistrement appelé {name}
-commence l'enregistrement {name}
-commence un enregistrement nommé {name}
+enregistre maintenant
+enregistre un fichier audio
 enregistre un fichier audio nommé {name}
-crée un enregistrement nommé {name}
+lance l'enregistrement
+lance un enregistrement appelé {name}
+lance un enregistrement audio
+lance un enregistrement nommé {name}
