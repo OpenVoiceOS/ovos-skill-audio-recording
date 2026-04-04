@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.10a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.10a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.10a1...0.2.10a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#44](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/44) ([JarbasAl](https://github.com/JarbasAl))
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#43](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/43) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.10a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.10a1) (2026-03-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.9a1...0.2.10a1)
