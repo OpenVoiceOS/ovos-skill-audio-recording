@@ -1,0 +1,12 @@
+# Example titles a recording may be saved under. The {name} slot is free-form;
+# these values only teach the engine where the slot sits in an utterance.
+voice memo
+meeting
+interview
+rehearsal
+song idea
+practice session
+lecture
+podcast episode
+band practice
+guitar riff

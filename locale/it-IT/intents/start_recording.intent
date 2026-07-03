@@ -29,7 +29,7 @@ inizio registrazione audio chiamato {name}
 avviare la registrazione subito
 registrazione audio
 inizializzare la registrazione intitolata {name}
-inizio registrazione audio {nome}
+inizio registrazione audio {name}
 registrazione audio come {name}
 iniziare la registrazione chiamata {name}
 avviare la registrazione audio chiamato {name}
@@ -40,7 +40,7 @@ impostare una nuova registrazione chiamata {name}
 iniziare a registrare {name}
 avviare una nuova registrazione
 avviare la registrazione chiamata {name}
-avviare la registrazione denominata {nome
+avviare la registrazione denominata {name}
 avviare la registrazione immediatamente come {name}
 avviare la registrazione audio con il nome {name}
 registrare un nuovo file audio chiamato {name}
@@ -60,7 +60,7 @@ avviare la registrazione per favore chiamato {name}
 inizializzare la registrazione
 registrare un nuovo file audio
 inizio registrazione audio intitolato {name}
-avviare la registrazione {nome}
+avviare la registrazione {name}
 attivare la registrazione audio
 avviare la registrazione ora come {name}
 avviare la registrazione ora denominata {name}
