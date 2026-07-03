@@ -14,6 +14,16 @@ PLUGIN_ENTRY_POINT = f'{SKILL_NAME.lower()}.{SKILL_AUTHOR.lower()}={SKILL_PKG}:{
 # skill_id=package_name:SkillClass
 
 
+def get_requirements(requirements_filename: str = "requirements.txt"):
+    requirements_file = path.join(path.abspath(path.dirname(__file__)),
+                                  requirements_filename)
+    with open(requirements_file, "r", encoding="utf-8") as r:
+        requirements = r.readlines()
+    requirements = [r.strip() for r in requirements if r.strip()
+                    and not r.strip().startswith("#")]
+    return requirements
+
+
 def find_resource_files():
     resource_base_dirs = ("locale",)
     base_dir = path.dirname(__file__)
@@ -71,5 +81,14 @@ setup(
     packages=[SKILL_PKG],
     include_package_data=True,
     keywords='ovos skill plugin',
+    install_requires=get_requirements(),
+    extras_require={
+        "test": [
+            "pytest",
+            "pytest-timeout",
+            "ovoscope>=1.0.1a1",
+            "ovos-adapt-parser>=1.0.9,<2.0.0",
+        ]
+    },
     entry_points={'ovos.plugin.skill': PLUGIN_ENTRY_POINT}
 )
