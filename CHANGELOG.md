@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.10a4](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.10a4) (2026-07-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.10a3...0.2.10a4)
+
+**Merged pull requests:**
+
+- chore: add ovoscope end2end intent-routing tests [\#48](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/48) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.10a3](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.10a3) (2026-04-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.10a2...0.2.10a3)
