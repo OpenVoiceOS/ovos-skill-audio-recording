@@ -1,2 +1,5 @@
 recursive-include locale *
 include *.txt
+include requirements.txt
+include test/requirements.txt
+include test/requirements-end2end.txt

@@ -42,6 +42,15 @@ with open(path.join(path.abspath(path.dirname(__file__)), "README.md"), "r") as 
     long_description = f.read()
 
 
+def required(requirements_file):
+    """ parse requirements from a requirements.txt file """
+    base_dir = path.abspath(path.dirname(__file__))
+    with open(path.join(base_dir, requirements_file), 'r') as f:
+        requirements = f.read().splitlines()
+        return [pkg for pkg in requirements
+                if pkg.strip() and not pkg.startswith("#")]
+
+
 def get_version():
     """ Find the version of this skill"""
     version_file = os.path.join(os.path.dirname(__file__), 'version.py')
@@ -80,6 +89,16 @@ setup(
     package_data={SKILL_PKG: find_resource_files()},
     packages=[SKILL_PKG],
     include_package_data=True,
+    install_requires=required("requirements.txt"),
+    extras_require={
+        # lightweight extra for unit tests (build_tests / coverage) — must NOT
+        # pull the heavy e2e stack so those jobs stay green without system deps
+        "test": required("test/requirements.txt"),
+        # heavy extra for ovoscope end-to-end tests (ovos-core[plugins,lgpl]
+        # drags in fann2 which needs swig + libfann system headers; the
+        # ovoscope job apt-installs them via require_padatious: true)
+        "end2end": required("test/requirements-end2end.txt"),
+    },
     keywords='ovos skill plugin',
     install_requires=get_requirements(),
     extras_require={

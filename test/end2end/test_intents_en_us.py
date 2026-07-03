@@ -1,62 +1,101 @@
-"""End-to-end intent routing tests for the en-US locale.
+"""End-to-end intent-routing coverage for ovos-skill-audio-recording (en-US).
 
-Each canonical utterance is fired through a real MiniCroft and asserted to
-route to the padatious ``start_recording.intent`` handler and run it to
-completion. The handler starts a recording session rather than speaking, so
-assertions cover the intent binding and handler lifecycle, not dialog content.
+The skill registers a single Padatious intent, ``start_recording.intent``. Its
+handler starts a recording session and emits ``recognizer_loop:state.set`` with
+the recording title, but speaks nothing, so the assertions below drive the
+padatious pipeline with representative utterances and check the deterministic
+message skeleton (utterance -> activate -> intent -> handler start/complete ->
+handled).
+
+The optional ``{name}`` slot titles the recording; a connector word
+(``named``/``called``/``as`` ...) always precedes it. The sibling
+``name.blacklist`` guard vocabulary that keeps fillers out of the ``{name}``
+title is asserted at registration level in ``test/unittests``.
 """
-import unittest
+import time
+from unittest import TestCase
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import CaptureSession, get_minicroft
+from ovos_utils.log import LOG
+
+from ovoscope import End2EndTest, get_minicroft
 
 SKILL_ID = "ovos-skill-audio-recording.openvoiceos"
+LANG = "en-US"
+HANDLER = "AudioRecordingSkill.handle_start_recording"
 
 
-class TestAudioRecordingIntentsEnUS(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
+class TestStartRecordingIntent(TestCase):
 
-    @classmethod
-    def tearDownClass(cls):
-        cls.minicroft.stop()
-
-    def _run(self, text):
-        session = Session("test-session")
-        session.pipeline = [
-            "ovos-adapt-pipeline-plugin-high",
-            "ovos-padatious-pipeline-plugin-high",
-            "ovos-adapt-pipeline-plugin-medium",
-            "ovos-adapt-pipeline-plugin-low",
+    def setUp(self):
+        LOG.set_level("CRITICAL")
+        self.minicroft = get_minicroft([SKILL_ID])
+        self.skill = self.minicroft.plugin_skills[SKILL_ID].instance
+        # the scheduled auto-stop event and the state.set broadcast are not part
+        # of the routing skeleton under test; ignore anything non-deterministic
+        self.ignore_messages = [
+            "speak",
+            "ovos.utterance.speak",
+            "recognizer_loop:state.set",
+            "mycroft.scheduler.schedule_event",
+            "mycroft.scheduler.remove_event",
         ]
-        utterance = Message(
+
+    def tearDown(self):
+        if self.minicroft:
+            self.minicroft.stop()
+
+    def _utterance(self, text):
+        session = Session(f"e2e-{abs(hash(text))}")
+        session.lang = LANG
+        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+        return Message(
             "recognizer_loop:utterance",
-            {"utterances": [text], "lang": "en-US"},
-            {"session": session.serialize(), "source": "A", "destination": "B"},
+            {"utterances": [text], "lang": LANG},
+            {"session": session.serialize()},
         )
-        capture = CaptureSession(self.minicroft)
-        capture.capture(utterance, timeout=30)
-        return capture.finish()
 
-    def _assert_start_recording(self, text):
-        messages = self._run(text)
-        types = [m.msg_type for m in messages]
-        self.assertIn(f"{SKILL_ID}:start_recording.intent", types)
-        self.assertIn("mycroft.skill.handler.complete", types)
+    def _expected(self, message):
+        intent_name = "start_recording.intent"
+        return [
+            message,
+            Message(f"{SKILL_ID}.activate", {}),
+            Message("ovos.intent.matched",
+                    {"skill_id": SKILL_ID,
+                     "intent_name": f"{SKILL_ID}:{intent_name}"}),
+            Message("ovos.intent.handler.start",
+                    {"skill_id": SKILL_ID, "intent_name": intent_name}),
+            Message(f"{SKILL_ID}:{intent_name}", {}),
+            Message("mycroft.skill.handler.start", {"name": HANDLER}),
+            Message("mycroft.skill.handler.complete", {"name": HANDLER}),
+            Message("ovos.intent.handler.complete",
+                    {"skill_id": SKILL_ID, "intent_name": intent_name}),
+            Message("ovos.utterance.handled", {}),
+        ]
 
-    def test_start_recording_plain(self):
-        self._assert_start_recording("start recording")
+    def _run(self, message):
+        test = End2EndTest(
+            minicroft=self.minicroft,
+            skill_ids=[],
+            eof_msgs=["ovos.utterance.handled"],
+            flip_points=["recognizer_loop:utterance"],
+            ignore_messages=self.ignore_messages,
+            source_message=message,
+            expected_messages=self._expected(message),
+        )
+        test.execute()
 
-    def test_begin_audio_capture(self):
-        self._assert_start_recording("begin audio capture")
+    def test_bare_start_recording(self):
+        """`start recording` -> start_recording.intent (unnamed recording)."""
+        self._run(self._utterance("start recording"))
 
-    def test_initiate_audio_recording(self):
-        self._assert_start_recording("initiate audio recording")
-
-    def test_record_audio_now(self):
-        self._assert_start_recording("record audio now")
-
-    def test_start_a_new_recording(self):
-        self._assert_start_recording("start a new recording")
+    def test_record_audio_named_meeting(self):
+        """`record audio named meeting` extracts the {name} title `meeting`."""
+        self.skill.recording_sessions.clear()
+        message = self._utterance("record audio named meeting")
+        self._run(message)
+        # exactly one recording session was opened, titled by the {name} slot
+        sessions = list(self.skill.recording_sessions.values())
+        self.assertEqual(len(sessions), 1)
+        self.assertEqual(sessions[0]["file_name"], "meeting")
