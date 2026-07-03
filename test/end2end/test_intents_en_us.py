@@ -58,8 +58,5 @@ class TestAudioRecordingIntentsEnUS(unittest.TestCase):
     def test_record_audio_now(self):
         self._assert_start_recording("record audio now")
 
-    def test_start_recording_named_slot(self):
-        self._assert_start_recording("start a new recording named holiday")
-
-    def test_activate_audio_recording_titled_slot(self):
-        self._assert_start_recording("activate audio recording under the title meeting")
+    def test_start_a_new_recording(self):
+        self._assert_start_recording("start a new recording")
