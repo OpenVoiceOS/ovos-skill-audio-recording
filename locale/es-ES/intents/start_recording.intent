@@ -11,14 +11,14 @@
 (activar|activa) la grabación de audio como {name}
 (activar|activa) la grabación de audio con título {name}
 (activar|activa) la grabación de audio llamada {name}
-(comenzar|comienza) la grabación de audio titulada {nombre}
+(comenzar|comienza) la grabación de audio titulada {name}
 (comienza|comenzar) a grabar con el nombre {name}
 (comienza|comenzar) la sesión de grabación llamada {name}
 (comienza|empieza) la captura de audio
 (establece|establecer) grabación con el nombre {name}
 (grabar|graba) audio ahora
-(grabar|graba) un audio como {nombre}
-(grabar|graba) un audio llamado {nombre}
+(grabar|graba) un audio como {name}
+(grabar|graba) un audio llamado {name}
 (grabar|graba) un nuevo archivo de audio
 (graba|grabar) (un|) audio
 (iniciar|inicia) (la|una) grabación de audio
@@ -51,7 +51,7 @@
 (inicia|iniciar|comienza|comenzar)  (a grabar|la grabación)
 (inicia|iniciar|comienza|comenzar)  la grabación de audio {name}
 (inicia|iniciar|comienza|comenzar) grabación de audio llamada {name}
-(inicia|iniciar|empieza|empezar) a grabar {nombre}
+(inicia|iniciar|empieza|empezar) a grabar {name}
 Configura una nueva grabación llamada {name}
 Empieza a grabar (inmediatamente|ahora|ahora mismo)
 Empieza a grabar ahora
