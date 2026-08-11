@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.12a3](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.12a3) (2026-08-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.12a2...0.2.12a3)
+
+**Merged pull requests:**
+
+- test: fix stale .intent-suffix assertion + per-locale e2e golden coverage [\#58](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/58) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.12a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.12a2) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.12a1...0.2.12a2)
