@@ -57,7 +57,10 @@ class TestStartRecordingIntent(TestCase):
         )
 
     def _expected(self, message):
-        intent_name = "start_recording.intent"
+        # PIPELINE-1 migration: the dispatched ovos.intent.matched intent_name
+        # (and the handler.start/complete payload) drops the ".intent" suffix
+        # from the source filename (same fix as ovos-skill-volume#127).
+        intent_name = "start_recording"
         return [
             message,
             Message(f"{SKILL_ID}.activate", {}),
