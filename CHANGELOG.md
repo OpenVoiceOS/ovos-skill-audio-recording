@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.12a4](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.12a4) (2026-08-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.12a3...0.2.12a4)
+
+**Merged pull requests:**
+
+- translate\(kab-DZ\): update skill.json [\#54](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/54) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(it-IT\): update start\_recording.intent [\#42](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/42) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [0.2.12a3](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.12a3) (2026-08-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.12a2...0.2.12a3)
