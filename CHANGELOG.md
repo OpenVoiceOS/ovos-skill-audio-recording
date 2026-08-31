@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.13a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.13a2) (2026-08-31)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.13a1...0.2.13a2)
+
+**Merged pull requests:**
+
+- Register name.entity to constrain the {name} slot [\#60](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/60) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.13a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.13a1) (2026-08-26)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.12a4...0.2.13a1)
