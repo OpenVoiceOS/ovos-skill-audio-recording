@@ -1,27 +1,30 @@
 # Audio Recording Skill
 
-Record audio to file, requires [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener)
+This skill records audio to a file. It needs [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener).
 
 ## About
 
-continuously record audio to file and disables wake words/STT while active, made for [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener)
+The skill records audio to a file and disables wake words and speech-to-text while it is active. It needs [ovos-dinkum-listener](https://github.com/OpenVoiceOS/ovos-dinkum-listener).
 
-A similar skill that saves text transcriptions instead of recording audio is [OpenVoiceOS/ovos-skill-dictation](https://github.com/OpenVoiceOS/ovos-skill-dictation)
+A similar skill, [OpenVoiceOS/ovos-skill-dictation](https://github.com/OpenVoiceOS/ovos-skill-dictation), saves text transcriptions instead of audio.
 
-in order to avoid users accidentally locking themselves in recording mode a special kind of wake word called a *stop hotword* can be configured, these special hotwords are only used during recording mode and will restore the listener to default state if detected. By default no *stop hotword* is pre-configured
+To avoid trapping a user in recording mode, you can configure a *stop hotword*. This special wake word only works during recording mode. When detected, it restores the listener to its default state. By default, no *stop hotword* is set.
 
-when started via this skill a audio recording will time out after 4 minutes (max_recording_seconds in skill settings) 
+A recording started by this skill times out after 4 minutes. Change this limit with the `max_recording_seconds` setting.
 
-if a `mycroft.stop` bus message is emitted (eg, "stop" via cli) the skill will take dinkum out of recording mode if recording was initiated by this skill
+If a `mycroft.stop` bus message arrives (for example, "stop" on the CLI), the skill takes dinkum out of recording mode, but only if this skill started the recording.
 
-**TODO**: dinkum should have a native (optional) timeout setting, using VAD to automatically stop recording after X seconds of silence
-
+Dinkum does not yet have a native, optional timeout that uses voice activity detection to stop a recording after a period of silence.
 
 ## Examples
 
 - "new recording"
 - "start recording"
 - "new recording named {file_name}"
+
+## Entity hints
+
+The skill ships `locale/<lang>/intents/name.entity`, a list of example recording titles ("voice memo", "meeting", "interview", ...) for the `{name}` slot in `start_recording.intent`. These are hints, not a closed list: any title you say, including one not on the list, still fills the slot and is used as the recording's file name; listed titles simply match with more confidence. `ovos-workshop` (>=9.5.0a1) registers every shipped `.entity` file automatically when the skill's language resources are loaded, so nothing needs to be configured for this.
 
 ## Credits
 
