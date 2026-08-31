@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.14a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.14a1) (2026-08-31)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.13a3...0.2.14a1)
+
+**Merged pull requests:**
+
+- fix: cover natural it-IT phrasings in start\_recording intent [\#67](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/67) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.13a3](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.13a3) (2026-08-31)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.13a2...0.2.13a3)
