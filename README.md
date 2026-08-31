@@ -22,6 +22,10 @@ Dinkum does not yet have a native, optional timeout that uses voice activity det
 - "start recording"
 - "new recording named {file_name}"
 
+## Entity hints
+
+The skill ships `locale/<lang>/intents/name.entity`, a list of example recording titles ("voice memo", "meeting", "interview", ...) for the `{name}` slot in `start_recording.intent`. These are hints, not a closed list: any title you say, including one not on the list, still fills the slot and is used as the recording's file name; listed titles simply match with more confidence. `ovos-workshop` (>=9.5.0a1) registers every shipped `.entity` file automatically when the skill's language resources are loaded, so nothing needs to be configured for this.
+
 ## Credits
 
 [NeonGecko](https://github.com/NeonGeckoCom/skill-audio-recording)
