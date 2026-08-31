@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.13a3](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.13a3) (2026-08-31)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.13a2...0.2.13a3)
+
+**Merged pull requests:**
+
+- docs: describe entity value hints [\#65](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/65) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.2.13a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.2.13a2) (2026-08-31)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.13a1...0.2.13a2)
