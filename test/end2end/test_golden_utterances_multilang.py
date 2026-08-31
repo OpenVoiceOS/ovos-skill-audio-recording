@@ -13,20 +13,18 @@ padacioso>=2.2.3a1, which contains the upstream fix for padacioso#77 --
 cross-language intent detach scoping -- required for a single shared
 MiniCroft to route more than one language correctly).
 
-Every row here is a natural-language sample drawn directly from the
-skill's own locale/<lang>/intents/start_recording.intent templates via
-``ovos_spec_tools.expand()`` -- no drafted or machine-translated content.
+Every row here is a natural-language sample that a real speaker of the
+locale would use to start a recording -- it must route to
+start_recording whether or not it happens to be derivable from the
+skill's own locale/<lang>/intents/start_recording.intent template via
+``ovos_spec_tools.expand()``. A row failing to route is a template gap,
+not a reason to drop the row.
 Rows with the optional ``{name}`` slot use the connector-word wording
 already present in the template, with the slot filled by the neutral,
 skill-provided example title "meeting" (the same word used verbatim in
 the en-US ``locale/en-US/intents/name.entity`` sample list and in
 test_intents_en_us.py::test_record_audio_named_meeting) -- this is a slot
 value, not translated skill content.
-
-``expand()`` was run over every locale's start_recording.intent with zero
-MalformedTemplate errors, so this pass found no template defects to fix
-in any locale (contrast ovos-skill-volume, which had real adapt-vocab
-collisions).
 
 Capture ends at ``mycroft.skill.handler.start`` for the same reason as
 test_intents_en_us.py: the handler starts a real recording session and
