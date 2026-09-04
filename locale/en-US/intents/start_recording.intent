@@ -11,6 +11,15 @@
 [(can you|could you|please)] (start|begin|initiate|commence|activate) [a new|an] audio (recording|capture) (named|called|titled|as|under the (name|title)|with the name) {name}
 [(can you|could you|please)] record audio [now|please]
 [(can you|could you|please)] record audio (named|called|titled|as|with the name) {name}
+[(can you|could you|please)] (start|begin) [a new|an] recording audio [now|right now|please]
+[(can you|could you|please)] (start|begin) capturing audio [now|please]
+[(can you|could you|please)] (make|kick off) [a|a new] recording [now|please]
+[(can you|could you|please)] (make|kick off) [a new|an] audio (recording|capture) [now|please]
+i want to record audio
+i want to (start|begin) [a|a new] recording
+i want to (start|begin) [a new|an] audio (recording|capture)
+(let's|lets|go ahead and) (start|begin) [a|a new] recording
+(let's|lets|go ahead and) (start|begin) [a new|an] audio (recording|capture)
 new recording
 new recording (named|called|as) {name}
 (start|begin) a [new] recording session
