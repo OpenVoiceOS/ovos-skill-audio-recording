@@ -43,8 +43,7 @@ SKILL_ID = "ovos-skill-audio-recording.openvoiceos"
 
 _PIPELINE = [
     "ovos-adapt-pipeline-plugin-high",
-    "ovos-padatious-pipeline-plugin-high",
-    "ovos-padacioso-pipeline-plugin-high",
+        "ovos-padacioso-pipeline-plugin-high",
     "ovos-adapt-pipeline-plugin-medium",
     "ovos-padacioso-pipeline-plugin-medium",
     "ovos-adapt-pipeline-plugin-low",
@@ -114,7 +113,7 @@ GOLDEN_ROWS = [_as_param(r) for r in ALL_ROWS]
 
 @pytest.fixture(scope="module")
 def minicroft():
-    mc = get_minicroft([SKILL_ID], secondary_langs=LANGS)
+    mc = get_minicroft([SKILL_ID], secondary_langs=LANGS, wait_for_trained=False)
     yield mc
     mc.stop()
 
