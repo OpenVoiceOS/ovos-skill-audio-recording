@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.3.1a1) (2026-09-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.3.0a1...0.3.1a1)
+
+**Merged pull requests:**
+
+- fix\(da-DK\): add missing name.entity [\#72](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/72) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [0.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.3.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.2.14a1...0.3.0a1)
