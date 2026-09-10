@@ -1,0 +1,16 @@
+# Start capturing microphone audio to a recording.
+# The optional {name} slot titles the saved recording; a connector word
+# (named/called/titled/as/with the name) always precedes it so the slot binds
+# a deliberate title instead of swallowing a trailing filler word.
+# An "audio recording"/"record audio"/"audio capture" object is always present,
+# so a bare "start recording" cannot collide with the dictation skill's
+# "start recording text|words" nor with the naptime "stop listening" cluster.
+[(can you|could you|please)] (start|begin|initiate|commence|activate) [a|a new] recording [now|please]
+[(can you|could you|please)] (start|begin|initiate|commence|activate) [a|a new] recording (named|called|titled|as|under the (name|title)|with the name) {name}
+[(can you|could you|please)] (start|begin|initiate|commence|activate) [a new|an] audio (recording|capture) [now|please]
+[(can you|could you|please)] (start|begin|initiate|commence|activate) [a new|an] audio (recording|capture) (named|called|titled|as|under the (name|title)|with the name) {name}
+[(can you|could you|please)] record audio [now|please]
+[(can you|could you|please)] record audio (named|called|titled|as|with the name) {name}
+new recording
+new recording (named|called|as) {name}
+(start|begin) a [new] recording session
