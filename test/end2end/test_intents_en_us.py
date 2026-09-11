@@ -1,9 +1,9 @@
 """End-to-end intent-routing coverage for ovos-skill-audio-recording (en-US).
 
-The skill registers a single Padatious intent, ``start_recording.intent``. Its
+The skill registers a single fuzzy-matched intent, ``start_recording.intent``. Its
 handler starts a recording session and emits ``recognizer_loop:state.set`` with
 the recording title, but speaks nothing, so the assertions below drive the
-padatious pipeline with representative utterances and check the deterministic
+padacioso pipeline with representative utterances and check the deterministic
 message skeleton (utterance -> activate -> intent -> handler start/complete ->
 handled).
 
@@ -30,7 +30,7 @@ class TestStartRecordingIntent(TestCase):
 
     def setUp(self):
         LOG.set_level("CRITICAL")
-        self.minicroft = get_minicroft([SKILL_ID])
+        self.minicroft = get_minicroft([SKILL_ID], wait_for_trained=False)
         self.skill = self.minicroft.plugin_skills[SKILL_ID].instance
         # the scheduled auto-stop event and the state.set broadcast are not part
         # of the routing skeleton under test; ignore anything non-deterministic
@@ -49,7 +49,7 @@ class TestStartRecordingIntent(TestCase):
     def _utterance(self, text):
         session = Session(f"e2e-{abs(hash(text))}")
         session.lang = LANG
-        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
         return Message(
             "recognizer_loop:utterance",
             {"utterances": [text], "lang": LANG},

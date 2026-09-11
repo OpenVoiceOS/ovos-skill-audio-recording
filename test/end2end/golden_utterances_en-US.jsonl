@@ -1,0 +1,22 @@
+{"lang": "en-US", "utterance": "start recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "please start recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "can you start recording now", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start a new recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "begin recording audio", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start recording named meeting", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start a recording called interview", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "record audio please", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "record audio named voice memo", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start audio recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "i want to record audio", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "lets start recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "go ahead and start recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start a recording session", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start a recording session called band practice", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "activate audio recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "commence recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start recording titled lecture", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start recording audio right now", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "kick off a new audio recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "make a new audio recording", "intent_label": "start_recording.intent"}
+{"lang": "en-US", "utterance": "start capturing audio", "intent_label": "start_recording.intent"}
