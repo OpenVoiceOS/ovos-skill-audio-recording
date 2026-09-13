@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.3.1a2) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.3.1a1...0.3.1a2)
+
+**Merged pull requests:**
+
+- test\(e2e\): assert the recording effect, not just intent routing [\#76](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/76) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- fix\(da-DK\): remove duplicate 'begynd at optage' example in skill.json [\#74](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/74) ([andlo](https://github.com/andlo))
+
 ## [0.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.3.1a1) (2026-09-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.3.0a1...0.3.1a1)
