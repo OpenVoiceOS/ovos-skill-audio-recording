@@ -1,0 +1,9 @@
+[(kun je|kunt u|alsjeblieft)] (start|begin|activeer) [een|een nieuwe] opname [nu|alsjeblieft]
+[(kun je|kunt u|alsjeblieft)] (start|begin|activeer) [een|een nieuwe] opname (genaamd|met de naam|getiteld|als) {name}
+[(kun je|kunt u|alsjeblieft)] (start|begin|activeer) [een nieuwe|een] audio-opname [nu|alsjeblieft]
+[(kun je|kunt u|alsjeblieft)] (start|begin|activeer) [een nieuwe|een] audio-opname (genaamd|met de naam|getiteld|als) {name}
+[(kun je|kunt u|alsjeblieft)] neem audio op [nu|alsjeblieft]
+[(kun je|kunt u|alsjeblieft)] neem audio op (genaamd|met de naam|als) {name}
+nieuwe opname
+nieuwe opname (genaamd|als) {name}
+(start|begin) een [nieuwe] opnamesessie
