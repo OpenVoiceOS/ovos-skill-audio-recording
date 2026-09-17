@@ -60,10 +60,11 @@ _IGNORE = [
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = [
+SECONDARY_LANGS = [
     "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fa-IR", "fr-FR",
-    "gl-ES", "it-IT", "pt-PT",
+    "gl-ES", "it-IT", "nl-NL", "pt-BR", "pt-PT", "sv-SE",
 ]
+LANGS = ["en-US"] + SECONDARY_LANGS
 
 # Cross-language negatives: an utterance from one locale's own golden slice
 # must not be claimed in a session using a different, unrelated language,
@@ -114,7 +115,7 @@ GOLDEN_ROWS = [_as_param(r) for r in ALL_ROWS]
 
 @pytest.fixture(scope="module")
 def minicroft():
-    mc = get_minicroft([SKILL_ID], secondary_langs=LANGS)
+    mc = get_minicroft([SKILL_ID], secondary_langs=SECONDARY_LANGS)
     yield mc
     mc.stop()
 
