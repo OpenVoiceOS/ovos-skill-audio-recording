@@ -65,6 +65,10 @@ LANGS = [
     "gl-ES", "it-IT", "pt-PT",
 ]
 
+# en-US is the MiniCroft primary language (get_minicroft's default), not a
+# secondary_lang, so it is loaded here but kept out of LANGS above.
+ROW_LANGS = LANGS + ["en-US"]
+
 # Cross-language negatives: an utterance from one locale's own golden slice
 # must not be claimed in a session using a different, unrelated language,
 # and phrasing lifted from other skills' domains must not be claimed either.
@@ -99,7 +103,7 @@ def _load_rows(lang):
 
 
 ALL_ROWS = []
-for _lang in LANGS:
+for _lang in ROW_LANGS:
     for _row in _load_rows(_lang):
         ALL_ROWS.append(_row)
 
