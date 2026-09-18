@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.5.0a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.4.0a2...0.5.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill fa-IR gap against en-US [\#78](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/78) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.4.0a2) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.4.0a1...0.4.0a2)
