@@ -1,0 +1,9 @@
+{
+    "examples": [
+        "Commence l'enregistrement",
+        "Crée un enregistrement nommé {name}",
+        "Démarre un enregistrement appelé {name}",
+        "Démarre un nouvel enregistrement audio nommé {name}",
+        "Enregistre maintenant"
+    ]
+}

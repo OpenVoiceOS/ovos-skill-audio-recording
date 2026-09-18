@@ -1,0 +1,9 @@
+[(você pode|pode|por favor)] (comece|começar|inicie|iniciar|ative|ativar) [uma|uma nova] gravação [agora|por favor]
+[(você pode|pode|por favor)] (comece|começar|inicie|iniciar|ative|ativar) [uma|uma nova] gravação (chamada|nomeada|intitulada|como|com o (nome|título)) {name}
+[(você pode|pode|por favor)] (comece|começar|inicie|iniciar|ative|ativar) [uma nova|uma] gravação de áudio [agora|por favor]
+[(você pode|pode|por favor)] (comece|começar|inicie|iniciar|ative|ativar) [uma nova|uma] gravação de áudio (chamada|nomeada|intitulada|como|com o (nome|título)) {name}
+[(você pode|pode|por favor)] grave áudio [agora|por favor]
+[(você pode|pode|por favor)] grave áudio (chamado|nomeado|como|com o nome) {name}
+nova gravação
+nova gravação (chamada|nomeada|como) {name}
+(comece|inicie) uma [nova] sessão de gravação

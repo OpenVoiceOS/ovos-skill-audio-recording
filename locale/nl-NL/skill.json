@@ -1,0 +1,9 @@
+{
+    "examples": [
+        "begin met opnemen",
+        "nieuwe opname genaamd {name}",
+        "start een opname genaamd {name}",
+        "start een nieuwe audio-opname genaamd {name}",
+        "start opname"
+    ]
+}
