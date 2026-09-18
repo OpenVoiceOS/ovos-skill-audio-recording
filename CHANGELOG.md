@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.5.1a1) (2026-09-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.5.0a1...0.5.1a1)
+
+**Merged pull requests:**
+
+- fix\(kab\): drop leaked examples\[N\] index prefixes from skill.json [\#87](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/87) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.5.0a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.4.0a2...0.5.0a1)
