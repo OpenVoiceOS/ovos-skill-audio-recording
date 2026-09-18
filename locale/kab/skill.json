@@ -1,9 +1,9 @@
 {
   "examples": [
-    "examples[0]: bdu asekles",
-    "examples[1]: bdu asekles amaynut {name}",
-    "examples[2]: bdu asekles amaynut isem-is {name}",
-    "examples[3]: bdu asekles aɣectan amaynut isem-is {name}",
-    "examples[4]: aha sekles "
+    "bdu asekles",
+    "bdu asekles amaynut {name}",
+    "bdu asekles amaynut isem-is {name}",
+    "bdu asekles aɣectan amaynut isem-is {name}",
+    "aha sekles "
   ]
 }
