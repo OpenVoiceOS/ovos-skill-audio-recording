@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1a2](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.5.1a2) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.5.1a1...0.5.1a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#83](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/83) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.5.1a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.5.1a1) (2026-09-18)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.5.0a1...0.5.1a1)
