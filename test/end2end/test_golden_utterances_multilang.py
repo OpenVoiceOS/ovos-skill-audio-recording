@@ -60,14 +60,16 @@ _IGNORE = [
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = [
+SECONDARY_LANGS = [
     "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fa-IR", "fr-FR",
-    "gl-ES", "it-IT", "pt-PT",
+    "gl-ES", "it-IT", "nl-NL", "pt-BR", "pt-PT", "sv-SE",
 ]
+LANGS = ["en-US"] + SECONDARY_LANGS
 
-# en-US is the MiniCroft primary language (get_minicroft's default), not a
-# secondary_lang, so it is loaded here but kept out of LANGS above.
-ROW_LANGS = LANGS + ["en-US"]
+# en-US is the MiniCroft primary language (get_minicroft's default), so it
+# is not a secondary_lang: SECONDARY_LANGS is what the fixture boots with,
+# and LANGS already names every locale that ships rows, en-US included.
+ROW_LANGS = LANGS
 
 # Cross-language negatives: an utterance from one locale's own golden slice
 # must not be claimed in a session using a different, unrelated language,
@@ -118,7 +120,7 @@ GOLDEN_ROWS = [_as_param(r) for r in ALL_ROWS]
 
 @pytest.fixture(scope="module")
 def minicroft():
-    mc = get_minicroft([SKILL_ID], secondary_langs=LANGS)
+    mc = get_minicroft([SKILL_ID], secondary_langs=SECONDARY_LANGS)
     yield mc
     mc.stop()
 
