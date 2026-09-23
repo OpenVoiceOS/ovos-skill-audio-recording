@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.7.0a1) (2026-09-23)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.6.0a1...0.7.0a1)
+
+**Merged pull requests:**
+
+- feat\(locale\): fill kab and pt-PT gaps against en-US [\#80](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/80) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.6.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.6.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.5.1a2...0.6.0a1)
