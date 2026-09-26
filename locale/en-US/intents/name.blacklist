@@ -1,0 +1,11 @@
+# Values that must not fill the {name} recording title.
+# The connector templates ("as {name}", "called {name}") are greedy over
+# free-form text, so everyday phrasings like "start recording as usual" or
+# "call it that" would otherwise bind a pronoun or adverb as the title.
+# Excluding these keeps such utterances as an unnamed recording.
+it
+that
+this
+one
+usual
+normal
