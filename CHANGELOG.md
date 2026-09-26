@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.7.1a1) (2026-09-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.7.0a1...0.7.1a1)
+
+**Merged pull requests:**
+
+- fix\(locale\): the store name and description in en-US [\#92](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/92) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.0a1](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.7.0a1) (2026-09-23)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.6.0a1...0.7.0a1)
