@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "rozpocznij nagrywanie", "lang": "pl-PL", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "rozpocznij nagrywanie dźwięku", "lang": "pl-PL", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "nowe nagranie o nazwie wywiad", "lang": "pl-PL", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}
