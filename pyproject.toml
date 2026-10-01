@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-audio-recording"
+dynamic = ["version"]
+description = "OVOS audio recording skill"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+dependencies = [
+    "ovos-utils>=0.0.28,<1.0.0",
+    "ovos-workshop>=9.5.0a1,<10.0.0"
+]
+
+[project.optional-dependencies]
+# lightweight extra for unit tests (build_tests / coverage) — must NOT pull the
+# heavy e2e stack so those jobs stay green without system deps
+test = [
+    "pytest>=5.2.4",
+    "pytest-cov>=2.8.1"
+]
+# heavy extra for ovoscope end-to-end tests (ovos-core[plugins,lgpl] drags in
+# fann2 which needs swig + libfann system headers; the ovoscope job
+# apt-installs them via require_padatious: true)
+end2end = [
+    "ovoscope>=1.6.8a1,<2.0.0",
+    "ovos-bus-client",
+    "ovos-core[plugins,lgpl]>=2.0.0a1",
+    "ovos-padatious>=2.0.4a1"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-audio-recording"
+
+[project.entry-points."ovos.plugin.skill"]
+"ovos-skill-audio-recording.openvoiceos" = "ovos_skill_audio_recording:AudioRecordingSkill"
+
+[tool.setuptools]
+packages = ["ovos_skill_audio_recording"]
+
+[tool.setuptools.package-dir]
+ovos_skill_audio_recording = ""
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_skill_audio_recording.version.__version__"}
+
+[tool.setuptools.package-data]
+ovos_skill_audio_recording = [
+    "*.json",
+    "locale/**/*",
+    "locale/*/*.voc",
+    "locale/*/*.intent",
+    "locale/*/*.dialog",
+]

@@ -1,0 +1,3 @@
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "начать запись", "lang": "ru-RU", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "начать звукозапись", "lang": "ru-RU", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "новая запись, именуемая лекция", "lang": "ru-RU", "intent_label": "start_recording", "intent_type": "padatious", "expected_messages": [], "needs_manual": false, "machine_generated": true}

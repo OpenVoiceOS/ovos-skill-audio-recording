@@ -1,0 +1,11 @@
+# Valeurs qui ne doivent jamais remplir le titre {name} de l'enregistrement.
+# Les gabarits de connecteur ("as {name}", "called {name}") sont gourmands sur
+# du texte libre : des formulations courantes comme "start recording as
+# usual" ou "call it that" lieraient sinon un pronom ou un adverbe comme
+# titre. Les exclure garde ces énoncés comme un enregistrement sans nom.
+ça
+cela
+ceci
+un
+habituel
+normal
