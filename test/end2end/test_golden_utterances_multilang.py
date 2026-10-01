@@ -1,11 +1,10 @@
 """Multilingual golden-utterance end-to-end coverage for
 ovos-skill-audio-recording.
 
-Extends test_intents_en_us.py (en-US only) to every other locale under
-locale/ that ships a real start_recording.intent (all of them: ca-ES,
-da-DK, de-DE, es-ES, eu-ES, fa-IR, fr-FR, gl-ES, it-IT, pt-PT -- unlike
-some sibling skills, every locale directory here has intent content, not
-just skill.json metadata).
+Extends test_intents_en_us.py (en-US only) to every locale that has a
+golden_utterances_<lang>.jsonl file. Every row runs and is asserted,
+including machine-generated rows that still need a native check: a row
+that does not route is a failure, never a skip or an xfail.
 
 One shared MiniCroft is booted with en-US as the primary language and
 every other locale as a ``secondary_lang`` (ovoscope>=1.6.5a1 /
@@ -60,11 +59,13 @@ _IGNORE = [
 
 END2END_DIR = Path(__file__).parent
 
-SECONDARY_LANGS = [
-    "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fa-IR", "fr-FR",
-    "gl-ES", "it-IT", "nl-NL", "pt-BR", "pt-PT", "sv-SE",
-]
-LANGS = ["en-US"] + SECONDARY_LANGS
+# Every golden_utterances_<lang>.jsonl present runs; a new locale file is
+# picked up without editing this list.
+LANGS = sorted(
+    p.stem[len("golden_utterances_"):]
+    for p in END2END_DIR.glob("golden_utterances_*.jsonl")
+)
+SECONDARY_LANGS = [lang for lang in LANGS if lang != "en-US"]
 
 # en-US is the MiniCroft primary language (get_minicroft's default), so it
 # is not a secondary_lang: SECONDARY_LANGS is what the fixture boots with,
@@ -97,10 +98,7 @@ def _load_rows(lang):
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
     return rows
 
 
@@ -148,30 +146,15 @@ def _golden_id(row):
     return f"{row['lang']}-{row['utterance']}"
 
 
-# No real routing defects were reproduced by this pass -- every row below
-# matched cleanly, so KNOWN_BUGS stays empty. It is kept (rather than
-# removed) as the landing spot for any genuine defect discovered in a
-# future locale-coverage pass, per the ovos-skill-volume precedent.
-KNOWN_BUGS = {}
-
-
 @pytest.mark.timeout(300)
 @pytest.mark.parametrize("row", GOLDEN_ROWS, ids=_golden_id)
 def test_golden_utterance_multilang(minicroft, row):
     candidates = _candidates(SKILL_ID, row["intent_label"])
     types = _types(minicroft, row["utterance"], row["lang"], f"golden-{_golden_id(row)}")
     matched = any(t in candidates for t in types)
-    bug_key = (row["lang"], row["utterance"])
-    if bug_key in KNOWN_BUGS and not matched:
-        pytest.xfail(reason=f"known-bug: {KNOWN_BUGS[bug_key]}")
-    if row.get("machine_generated") and not matched:
-        pytest.xfail(reason="coverage-gap (machine-drafted, pending native validation)")
     assert matched, (
         f"[{row['lang']}] {row['utterance']!r}: expected one of {sorted(candidates)!r}, got {types!r}"
     )
-
-
-KNOWN_NEGATIVE_BUGS = {}
 
 
 @pytest.mark.timeout(300)
@@ -180,7 +163,12 @@ def test_cross_language_negative(minicroft, negative):
     text, lang, _why = negative
     types = _types(minicroft, text, lang, f"negative-{lang}-{text}")
     claimed = any(t.startswith(f"{SKILL_ID}:") for t in types)
-    bug_key = (lang, text)
-    if bug_key in KNOWN_NEGATIVE_BUGS and claimed:
-        pytest.xfail(reason=f"known-bug: {KNOWN_NEGATIVE_BUGS[bug_key]}")
     assert not claimed, f"[{lang}] {text!r} was incorrectly claimed by {SKILL_ID}"
+
+
+def test_every_shipping_locale_has_a_golden_file():
+    golden = {p.stem.split("_", 2)[2] for p in END2END_DIR.glob("golden_utterances_*.jsonl")}
+    locale_root = Path(__file__).parents[2] / "locale"
+    shipping = {d.name for d in locale_root.iterdir()
+                if d.is_dir() and any(d.rglob("*.intent"))}
+    assert golden == shipping, f"golden files {sorted(golden ^ shipping)} differ from shipping locales"
