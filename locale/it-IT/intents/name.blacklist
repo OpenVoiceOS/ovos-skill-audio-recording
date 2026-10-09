@@ -1,0 +1,11 @@
+# Valori che non devono mai riempire il titolo {name} della registrazione.
+# I modelli di connettore ("as {name}", "called {name}") sono avidi su testo
+# libero: frasi comuni come "start recording as usual" o "call it that"
+# altrimenti legherebbero un pronome o un avverbio come titolo. Escluderli
+# mantiene queste frasi come una registrazione senza nome.
+esso
+quello
+questo
+uno
+solito
+normale

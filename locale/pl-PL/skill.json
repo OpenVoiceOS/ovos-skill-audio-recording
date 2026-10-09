@@ -1,0 +1,11 @@
+{
+  "skill_id": "ovos-skill-audio-recording.openvoiceos",
+  "name": "Audio Recording",
+  "description": "Record audio to a file by voice. While a recording runs, the skill turns off the wake word and speech to text. It needs ovos-dinkum-listener.",
+  "examples": [
+    "inicjuj nagranie"
+  ],
+  "tags": [
+    "audio"
+  ]
+}

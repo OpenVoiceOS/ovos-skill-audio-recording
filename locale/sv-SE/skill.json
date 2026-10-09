@@ -1,0 +1,9 @@
+{
+    "examples": [
+        "börja spela in",
+        "ny inspelning som heter {name}",
+        "starta en inspelning som heter {name}",
+        "starta en ny ljudinspelning som heter {name}",
+        "starta inspelning"
+    ]
+}

@@ -1,0 +1,7 @@
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "начни записывать", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "начать запись"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "включи диктофон", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "начать звукозапись"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "сделай запись и назови её лекция", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "новая запись, именуемая лекция"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "хочу записать звук", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "можешь записать немного аудио?", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "запиши звук и сохрани как совещание", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "запиши эту репетицию", "lang": "ru-RU", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
