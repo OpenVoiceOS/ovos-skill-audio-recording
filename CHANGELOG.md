@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.2a6](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.7.2a6) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.7.2a5...0.7.2a6)
+
+**Merged pull requests:**
+
+- test: natural golden rows on the m2v pipeline for every locale [\#104](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/pull/104) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [0.7.2a5](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/tree/0.7.2a5) (2026-10-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-audio-recording/compare/0.7.2a4...0.7.2a5)
