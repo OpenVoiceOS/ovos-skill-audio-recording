@@ -1,6 +1,7 @@
 """End-to-end intent-routing coverage for ovos-skill-audio-recording (en-US).
 
-The skill registers a single Padatious intent, ``start_recording.intent``.
+The skill registers a single intent, ``start_recording.intent``, routed here
+on the padacioso pipeline.
 Routing alone (utterance -> activate -> intent -> handler start/complete ->
 handled) is satisfied by a handler that raises before doing any work, so the
 skeleton below also asserts the recording EFFECT: the exact
@@ -52,6 +53,7 @@ class TestStartRecordingIntent(TestCase):
             "ovos.utterance.speak",
             "mycroft.scheduler.schedule_event",
             "mycroft.scheduler.remove_event",
+            "ovos.scheduler.list",
         ]
 
     def tearDown(self):
@@ -61,7 +63,7 @@ class TestStartRecordingIntent(TestCase):
     def _utterance(self, text):
         session = Session(f"e2e-{abs(hash(text))}")
         session.lang = LANG
-        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
         return Message(
             "recognizer_loop:utterance",
             {"utterances": [text], "lang": LANG},

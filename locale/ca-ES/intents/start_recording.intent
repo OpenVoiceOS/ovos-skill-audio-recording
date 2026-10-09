@@ -37,7 +37,7 @@ comença a enregistrar immediatament
 comença a enregistrar ara
 comença a enregistrar ara mateix
 comença a gravar {name}
-comença a enregitrar {name}
+comença a enregistrar {name}
 comença l'enregistrament d'àudio amb nom {name}
 comença l'enregistrament d'àudio {name}
 comença la captura d'àudio
@@ -61,8 +61,8 @@ comença la sessió d'enregistrament
 comença la sessió de gravació anomenada {name}
 comença la sessió d'enregistrament anomenada {name}
 configura (una gravació nova|un enregistrament nou) (amb nom|anomenada|anomenat) {name}
-continua amb la gravació
-continua amb l'enregistrament
+endavant amb la gravació
+endavant amb l'enregistrament
 enregistra un fitxer d'àudio nou amb nom {name}
 enregistra un àudio amb nom {name}
 estableix un enregistrament anomenat {name}

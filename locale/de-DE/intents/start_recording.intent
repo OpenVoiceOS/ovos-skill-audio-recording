@@ -47,10 +47,10 @@ Beginne sofort mit der Aufnahme
 Beginne sofort mit der Aufnahme als {name}
 Beginnen Sie mit der Aufnahme mit dem Namen {name}
 Jetzt Audio aufnehmen
-Mit der Aufnahme fortfahren
-Aufnahme fortsetzen
-Nehme eine neue Audiodatei mit dem Namen {name} auf
-Nehme jetzt Audio mit dem Namen {name} auf
+Mit der Aufnahme loslegen
+Aufnahme beginnen
+Nimm eine neue Audiodatei mit dem Namen {name} auf
+Nimm jetzt Audio mit dem Namen {name} auf
 Richte eine neue Aufnahme mit dem Namen {name} ein.
 Starte  eine neue Audioaufnahme mit dem Namen {name}
 Starte bitte die Audioaufnahme
@@ -76,3 +76,7 @@ neue Aufnahme mit dem Namen {name}
 starte eine Aufnahme mit dem Namen {name}
 starte eine neue Aufnahme mit dem Namen {name}
 starte eine neue Aufnahme mit dem Titel {name}
+(fang|fange) jetzt an aufzunehmen
+nimm das (mal|jetzt) auf
+kannst du (etwas|was) aufnehmen
+schalte das Diktiergerät ein

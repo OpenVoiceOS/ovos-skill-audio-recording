@@ -1,7 +1,7 @@
 """Pytest collection config.
 
 The ``test/end2end/`` suite is ovoscope-driven and needs the heavy e2e stack
-(``ovoscope`` + ``ovos-core[plugins,lgpl]``, which pulls fann2 / swig+libfann).
+(``ovoscope``, ``ovos-core`` and ``ovos-m2v-pipeline``, the ``end2end`` extra).
 It is exercised by the dedicated ``ovoscope`` CI job. The lightweight
 ``build_tests``/``coverage`` jobs install only the ``test`` extra and would
 error importing the end2end modules, so skip collecting them when ovoscope is
