@@ -10,7 +10,7 @@ begynde at optage nu
 begynde at optage {name}
 begynde optagelsen
 begynde optagelsessessionen
-fortsæt med optagelsen
+gå i gang med optagelsen
 initialiser optagelse med titlen {name}
 initialisere optagelsen
 ny optagelse
@@ -63,3 +63,4 @@ starte en ny optagelse
 starte en optagelse
 starte lydoptagelse
 starte optagelsen
+tænd for optageren
