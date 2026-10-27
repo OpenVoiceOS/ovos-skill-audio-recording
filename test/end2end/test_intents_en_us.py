@@ -1,7 +1,6 @@
 """End-to-end intent-routing coverage for ovos-skill-audio-recording (en-US).
 
-The skill registers a single intent, ``start_recording.intent``, routed here
-on the padacioso pipeline.
+The skill registers a single intent, ``start_recording.intent``.
 Routing alone (utterance -> activate -> intent -> handler start/complete ->
 handled) is satisfied by a handler that raises before doing any work, so the
 skeleton below also asserts the recording EFFECT: the exact
@@ -26,7 +25,8 @@ from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session, SessionManager
 from ovos_utils.log import LOG
 
-from ovoscope import End2EndTest, get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 SKILL_ID = "ovos-skill-audio-recording.openvoiceos"
 LANG = "en-US"
@@ -42,7 +42,7 @@ class TestStartRecordingIntent(TestCase):
 
     def setUp(self):
         LOG.set_level("CRITICAL")
-        self.minicroft = get_minicroft([SKILL_ID])
+        self.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
         self.skill = self.minicroft.plugin_skills[SKILL_ID].instance
         # spoken text and the scheduler bookkeeping are not part of the
         # routing skeleton or the recording effect under test; everything
@@ -63,7 +63,7 @@ class TestStartRecordingIntent(TestCase):
     def _utterance(self, text):
         session = Session(f"e2e-{abs(hash(text))}")
         session.lang = LANG
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
+        session.pipeline = list(PIPELINE)
         return Message(
             "recognizer_loop:utterance",
             {"utterances": [text], "lang": LANG},
@@ -99,16 +99,24 @@ class TestStartRecordingIntent(TestCase):
         ]
 
     def _run(self, message, recording_name):
-        test = End2EndTest(
-            minicroft=self.minicroft,
-            skill_ids=[],
-            eof_msgs=["ovos.utterance.handled"],
-            flip_points=["recognizer_loop:utterance"],
-            ignore_messages=self.ignore_messages,
-            source_message=message,
-            expected_messages=self._expected(message, recording_name),
-        )
-        test.execute()
+        """Fire ``message``, skip the test when m2v does not route it to
+        start_recording, then assert the message sequence: every type in
+        order, and every expected data key by value."""
+        capture = CaptureSession(self.minicroft,
+                                 eof_msgs=["ovos.utterance.handled"],
+                                 ignore_messages=self.ignore_messages)
+        capture.capture(message, timeout=30)
+        received = capture.finish()
+        TALLY.assert_routed(message.data["utterances"][0],
+                            f"{SKILL_ID}:start_recording",
+                            [m.msg_type for m in received])
+        expected = self._expected(message, recording_name)
+        self.assertEqual([m.msg_type for m in received],
+                         [m.msg_type for m in expected])
+        for got, want in zip(received, expected):
+            for key, value in want.data.items():
+                self.assertEqual(got.data.get(key), value,
+                                 f"{want.msg_type}: data[{key!r}]")
 
     def test_bare_start_recording(self):
         """`start recording` -> start_recording.intent (unnamed recording).
