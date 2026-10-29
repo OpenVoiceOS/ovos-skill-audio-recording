@@ -1,0 +1,31 @@
+# Start capturing microphone audio to a recording.
+# The optional {name} slot titles the saved recording; a connector word
+# (named/called/titled/as/with the name) always precedes it so the slot binds
+# a deliberate title instead of swallowing a trailing filler word.
+# An "audio recording"/"record audio"/"audio capture" object is always present,
+# so a bare "start recording" cannot collide with the dictation skill's
+# "start recording text|words" nor with the naptime "stop listening" cluster.
+начать запись
+Инициировать запись
+включи запись
+Запустить запись по имени {name}
+Начать запись по имени {name}
+Инициировать запись по имени {name}
+начать запись по названию {name}
+Запустить звукозапись
+начать звукозапись
+Инициировать звукозапись
+Запустить звуковую запись {name}
+Начать звукозапись по имени {name}
+Инициировать звукозапись {name}
+начать звукозапись {name}
+запиши звук
+Звуковая запись {name}
+запиши звук под названием {name}
+запись звука как {name}
+новая запись
+новая запись {name}
+новая запись, именуемая {name}
+новая запись: {name}
+начать запись сеанса
+начать сеанс звукозаписи

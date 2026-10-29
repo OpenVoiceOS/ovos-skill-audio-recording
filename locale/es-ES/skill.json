@@ -1,0 +1,9 @@
+{
+  "examples": [
+    "comenzar (la grabación|a grabar)\nempezar (la grabación|a grabar)",
+    "nueva grabación (llamada|con el nombre) {name}",
+    "(Inicia|Empieza) una grabación (llamada|con el nombre) {name}",
+    "(Inicia|Empieza) una nueva grabación de audio (llamada|con el nombre) {name}",
+    "comienza (la grabación|a grabar)\nempieza (la grabación|a grabar)"
+  ]
+}

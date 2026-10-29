@@ -1,9 +1,0 @@
-{
-    "examples": [
-        "begin recording",
-        "new recording named {name}",
-        "start a recording called {name}",
-        "start a new audio recording called {name}",
-        "start recording"
-    ]
-}

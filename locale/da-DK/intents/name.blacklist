@@ -1,0 +1,9 @@
+# Values that must not fill the {name} recording title (pronouns and
+# adverbs the greedy "som {name}" / "kaldet {name}" connectors would bind).
+det
+den
+dette
+denne
+sådan
+normalt
+som sædvanlig

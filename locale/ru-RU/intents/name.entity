@@ -1,0 +1,11 @@
+# Example titles a recording may be saved under. The {name} slot is free-form;
+# these values only teach the engine where the slot sits in an utterance.
+голосовая заметка
+совещание
+собеседование
+репетиция
+идея песни
+тренировка
+лекция
+эпизод подкаста
+Гитарный рифф

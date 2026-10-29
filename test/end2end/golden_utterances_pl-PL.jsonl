@@ -1,0 +1,7 @@
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "zacznij nagrywać", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "rozpocznij nagrywanie"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "włącz dyktafon", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "rozpocznij nagrywanie dźwięku"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "nagraj dźwięk i nazwij go wywiad", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true, "rewritten_from": "nowe nagranie o nazwie wywiad"}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "chcę coś nagrać", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "możesz nagrać trochę dźwięku?", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "zrób nagranie i zapisz je jako notatka głosowa", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
+{"skill_id": "ovos-skill-audio-recording.openvoiceos", "utterance": "nagraj ten wykład", "lang": "pl-PL", "intent_label": "start_recording", "needs_manual": true, "machine_generated": true}
