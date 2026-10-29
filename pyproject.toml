@@ -24,11 +24,11 @@ test = [
     "pytest>=5.2.4",
     "pytest-cov>=2.8.1"
 ]
-# heavy extra for the ovoscope end-to-end tests: the golden rows run on the
-# m2v prototype pipeline, the routing tests on padacioso
+# heavy extra for the ovoscope end-to-end tests, which run on the m2v
+# prototype pipeline
 end2end = [
-    "ovoscope>=1.11.2a1",
-    "ovos-m2v-pipeline>=0.32.0a1",
+    "ovoscope>=1.12.1a1",
+    "ovos-m2v-pipeline>=0.37.3a1",
     "ovos-bus-client",
     "ovos-core>=2.0.0a1",
     "pytest>=5.2.4",
@@ -58,3 +58,6 @@ ovos_skill_audio_recording = [
     "locale/*/*.intent",
     "locale/*/*.dialog",
 ]
+
+[tool.pytest.ini_options]
+ovoscope_min_routing_rate = 0.9
